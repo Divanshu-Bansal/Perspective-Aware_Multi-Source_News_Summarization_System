@@ -1,4 +1,4 @@
-# 🗞️ Perspective-Aware Multi-Agent News Summarization System
+# 🗞️ Perspective-Aware Multi-Source News Summarization System
 
 > Automatically collects, processes, and summarizes news from multiple sources — explicitly comparing single-source versus multi-source coverage to demonstrate the value of perspective aggregation, with full experiment tracking via ClearML.
 
