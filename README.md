@@ -53,7 +53,7 @@ The app is deployed via GitHub Actions with a Cloudflare tunnel. To launch it:
 
 ## Architecture
 
-![Architecture diagram of the application](https://github.com/Divanshu-Bansal/Perspective_Aware_Multi_Agent_News_Summarization/blob/one_vs_multisource_summaries/docs/Architecture/single%20source%20vs%20multi%20source%20news%20summary.png)
+![Architecture diagram of the application](https://github.com/Divanshu-Bansal/Perspective-Aware_Multi-Source_News_Summarization_System/blob/master/docs/Architecture/news_summarization_pipeline_architecture_v2.png)
 ---
 
 ## Key features
@@ -222,7 +222,7 @@ CLEARML_API_SECRET_KEY
 ```
 
 **Trigger options:**
-- Push to `main` → auto-deploys
+- Push to `master` → auto-deploys
 - Actions tab → Deploy Streamlit App → Run workflow → manual trigger
 
 **The workflow:**
@@ -232,7 +232,7 @@ CLEARML_API_SECRET_KEY
 4. Installs Cloudflare tunnel
 5. Starts Streamlit on port 8501
 6. Opens a Cloudflare tunnel and prints the public URL
-7. Keeps the app live for up to 6 hours
+7. Keeps the app live for up to 60 minutes
 
 ---
 
