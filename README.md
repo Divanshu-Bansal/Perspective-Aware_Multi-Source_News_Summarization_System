@@ -136,8 +136,8 @@ The app is deployed via GitHub Actions with a Cloudflare tunnel. To launch it:
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/Divanshu-Bansal/Perspective_Aware_Multi_Agent_News_Summarization.git
-cd Perspective_Aware_Multi_Agent_News_Summarization
+git clone https://github.com/Divanshu-Bansal/Perspective-Aware_Multi-Source_News_Summarization_System.git
+cd Perspective-Aware_Multi-Source_News_Summarization_System
 ```
 
 **2. Create and activate a virtual environment**
