@@ -41,7 +41,7 @@ All of this runs through a Streamlit UI with progressive streaming — you watch
 
 ## Live demo
 
-The app is deployed via GitHub Actions with a Cloudflare tunnel. To launch it:
+The app is hosted temporarily via GitHub Actions with a Cloudflare tunnel. To launch it:
 
 1. Go to the **Actions** tab in this repository
 2. Click **Deploy Streamlit App**
@@ -76,9 +76,9 @@ The app is deployed via GitHub Actions with a Cloudflare tunnel. To launch it:
 
 **ClearML experiment tracking** — every pipeline run is logged as a ClearML task with fetch metrics, per-article relevance scores, perspective distribution, common themes, and the final summary.
 
-**Progressive streaming UI** — Streamlit app shows each step as it happens. Article cards appear one by one, summaries fill in as they complete, perspective badges appear after comparison, and the neutral summary appears last.
+**Progressive streaming UI** — Streamlit app shows each step as it happens. Article cards appear one by one, summaries fill in as they complete, perspective badges appear after comparison, and the multi-source synthesis appears last.
 
-**CI/CD deployment** — GitHub Actions workflow installs dependencies, configures the environment, starts Streamlit, opens a Cloudflare tunnel, and prints the public URL in the workflow logs.
+**Automated demo hosting** — GitHub Actions workflow installs dependencies, configures the environment, starts Streamlit, opens a Cloudflare tunnel, and prints the public URL in the workflow logs.
 
 ---
 
@@ -118,7 +118,7 @@ The app is deployed via GitHub Actions with a Cloudflare tunnel. To launch it:
 │   └── config.py                  # Environment configuration
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml             # GitHub Actions CI/CD pipeline
+│       └── deploy.yml             # Demo-hosting workflow
 ├── data/
 │   └── raw/                       # Saved raw article JSON per query
 ├── outputs/
@@ -208,9 +208,9 @@ python main.py --topic "electric vehicle market" --sources 30 --max 10
 
 ---
 
-## GitHub Actions deployment
+## GitHub Actions Demo Hosting
 
-The repository includes a workflow that deploys the app automatically.
+The repository includes a workflow that launches a temporary demo.
 
 **Setup — add these secrets to your repository** (Settings → Secrets → Actions):
 ```
@@ -222,7 +222,7 @@ CLEARML_API_SECRET_KEY
 ```
 
 **Trigger options:**
-- Push to `master` → auto-deploys
+- Push to `master` → launches the demo
 - Actions tab → Deploy Streamlit App → Run workflow → manual trigger
 
 **The workflow:**
